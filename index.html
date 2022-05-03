@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <title>Transformers CRUD Application</title>
+  </head>
+
+  <body>
+    <div class="title">
+      <h1>Teletran 1 Database</h1>
+      <p>
+        Enter and Retrieve profile data on Cybertronians, past, present, and
+        future:
+      </p>
+    </div>
+
+    <div class="form">
+      <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+        <input type="text" id="add-tf" placeholder="Submit New Profile" />
+        <input type="submit" value="Add" class="btn btn-primary" />
+      </form>
+      <p>Cybertronians Catalogued:</p>
+      <p id="counter"></p>
+      <table>
+        <tr class="tf-edit">
+          <th>
+            <h3>Edit Transformer Data:</h3>
+            <tbody id="entries"></tbody>
+          </th>
+        </tr>
+      </table>
+    </div>
+
+    <div id="edit-box" role="aria-hidden">
+      <form action="javascript:void(0);" method="POST" id="save-edit">
+        <input type="text" id="edit-tf" />
+        <input type="submit" value="Save" class="btn btn-success" />
+        <a onclick="CloseInput()" aria-label="Close">&#10006</a>
+      </form>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
